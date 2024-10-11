@@ -1,0 +1,7 @@
+Collection Update
+1. Hati-hati ketika menggunakan Collection Element
+2. Setiap kita mengubah data di Collection Element, JPA akan menghapus dulu seluruh data di table Collection nya, setelah itu akan melakukan insert data baru
+3. Oleh karena itu, Id pada Collection Element akan selalu berubah
+4. Jadi pastikan Id pada table Collection Element tidak digunakan sebagai Foreign Key di table lain
+5. Lantas bagaimana jika kita ingin menggunakan table Collection Element sebagai FK di table lain?
+6. Maka kita jangan menggunakan Collection Element, kita harus menggunakan JPA Entity Relationship yang akan dibahas di bab khusus
