@@ -1,0 +1,46 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+
+<!--    NAMA APLIKASI YANG DIBUAT-->
+    <persistence-unit name="FAJAR-JPA">
+
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Entity Classes (JIKA LEBIH DARI 1 SILAHKAN DI TAMBAHKAN,jika tidak maka bisa menyebabkan proses lebih lama karna membacanya pas memanggil entitynya bukan dengan cara menyimpan pada persintence ini) -->
+        <class>fajar.jpa.entity.Customer</class>
+        <class>fajar.jpa.entity.Category</class>
+        <class>fajar.jpa.entity.Image</class>
+        <class>fajar.jpa.entity.Member</class>
+        <class>fajar.jpa.entity.Department</class>
+        <class>fajar.jpa.entity.Brand</class>
+        <class>fajar.jpa.entity.Product</class>
+        <class>fajar.jpa.entity.User</class>
+        <class>fajar.jpa.entity.Wallet</class>
+        <class>fajar.jpa.entity.Credential</class>
+        <class>fajar.jpa.entity.Employee</class>
+        <class>fajar.jpa.entity.Manager</class>
+        <class>fajar.jpa.entity.VicePresident</class>
+        <class>fajar.jpa.entity.Payment</class>
+        <class>fajar.jpa.entity.PaymentCreditCard</class>
+        <class>fajar.jpa.entity.PaymentGopay</class>
+        <class>fajar.jpa.entity.Transaction</class>
+        <class>fajar.jpa.entity.TransactionDebit</class>
+        <class>fajar.jpa.entity.TransactionCredit </class>
+
+
+<!--        PROPERTY PERSISNTANCE-->
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/fajar_jpa"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="fahmifadilah25"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>
